@@ -24,7 +24,7 @@ def linechart(request):
         form = ProductForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('index')
+            return redirect('linechart')
     else:
         form = ProductForm()
     context = {
@@ -32,3 +32,18 @@ def linechart(request):
         'form': form,
     }
     return render(request, 'linechart.html', context)
+
+def piechart(request):
+    data = Product.objects.all()
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('piechart')
+    else:
+        form = ProductForm()
+    context = {
+        'data': data,
+        'form': form,
+    }
+    return render(request, 'piechart.html', context)

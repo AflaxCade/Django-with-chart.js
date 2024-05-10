@@ -16,11 +16,11 @@
                     {% endif %}
                 </li>
                 <li class="nav-item">
-                    {% if request.path == '/linechart/' %}
-                        <a class="nav-link active" href="linechart">Line</span></a>
-                    {% else %}
-                        <a class="nav-link" href="linechart">Line</span></a>
-                    {% endif %}
+                    <a class="nav-link {% if request.path == '/linechart/' %}active{% endif %}" href="/linechart">Line</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/piechart/' %}active{% endif %}" href="/piechart">Pie</a>
+                </li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Doughnut</span></a>
