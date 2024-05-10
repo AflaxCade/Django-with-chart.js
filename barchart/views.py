@@ -17,3 +17,18 @@ def index(request):
         'form': form,
     }
     return render(request, 'index.html', context)
+
+def linechart(request):
+    data = Product.objects.all()
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = ProductForm()
+    context = {
+        'data': data,
+        'form': form,
+    }
+    return render(request, 'linechart.html', context)
