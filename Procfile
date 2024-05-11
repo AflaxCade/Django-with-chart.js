@@ -1,1 +1,1 @@
-web: gunicorn CRM.wsgi:application
+web: gunicorn datavisual.wsgi:application
