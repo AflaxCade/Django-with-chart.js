@@ -47,3 +47,35 @@ def piechart(request):
         'form': form,
     }
     return render(request, 'piechart.html', context)
+
+
+def doughnutchart(request):
+    data = Product.objects.all()
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('doughnutchart')
+    else:
+        form = ProductForm()
+    context = {
+        'data': data,
+        'form': form,
+    }
+    return render(request, 'doughnutchart.html', context)
+
+
+def polarareachart(request):
+    data = Product.objects.all()
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('polarareachart')
+    else:
+        form = ProductForm()
+    context = {
+        'data': data,
+        'form': form,
+    }
+    return render(request, 'polarareachart.html', context)
