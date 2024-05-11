@@ -95,4 +95,4 @@ The server will start on `http://localhost:8000` or `http://127.0.0.1:8000`.
 ![Django Chartjs Snapshot](https://github.com/AflaxCade/Django-with-chart.js/blob/main/Screenshot%205.png)
 
 
-Above is a snapshot of the Django CRM interface showcasing its features and layout.
+Above is a snapshot of the Django with chartjs interface showcasing its features and layout.
