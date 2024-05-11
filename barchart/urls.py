@@ -6,4 +6,5 @@ urlpatterns = [
     path('linechart/', views.linechart, name='linechart'),
     path('piechart/', views.piechart, name='piechart'),
     path('doughnutchart/', views.doughnutchart, name='doughnutchart'),
+    path('polarareachart/', views.polarareachart, name='polarareachart'),
 ]
